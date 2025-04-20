@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <header>
+        <section className="container header-section flex">
+          <div className="logo">
+            <a href="#">DNAspire</a>
+          </div>
+          <nav className="links">
+            <ul className="flex">
+              <li>
+                <a href="#">About us</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#">terms</a>
+              </li>
+              <li>
+                <a href="#">contact</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </header>
 
-export default App
+      <main>
+        <section>
+          <div className="container main-section grid grid-two-column">
+          <div className="info-left-side flex flex-column">
+            <div className="info-text">
+              <h1 className="discover-text">Discover</h1>
+              <p>
+                personalized health insights, ancestry breakdowns, and genetic
+                traits—all from a simple saliva test.
+              </p>
+            </div>
+            <div className="info-buttons flex">
+              <button>order now</button>
+              <button>see how it works</button>
+            </div>
+          </div>
+          <div className="info-right-side">
+            <img src="./public/images/right-image.svg" alt="image" />
+          </div>
+          </div>
+        </section>
+        <div class="custom-shape-divider-bottom-1745089715">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </main>
+    </>
+  );
+};
