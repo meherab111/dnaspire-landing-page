@@ -1,12 +1,15 @@
+import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/Global";
-import { HeaderStyle } from "./styles/Header";
-import { MainStyle } from "./styles/Main";
+// import { HeaderStyle } from "./styles/Header";
+// import { MainStyle } from "./styles/Main";
+import { theme } from "./styles/Theme";
 
 export const App = () => {
   return (
+    <ThemeProvider theme ={theme}>
     <>
-    <GlobalStyle/>
-      <HeaderStyle>
+      <GlobalStyle/>
+      <header>
         <section className="container header-section flex">
           <div className="logo">
             <a href="#">DNAspire</a>
@@ -28,9 +31,9 @@ export const App = () => {
             </ul>
           </nav>
         </section>
-      </HeaderStyle>
+      </header>
 
-      <MainStyle>
+      <main>
         <section className="container main-section grid grid-two-column">
          
           <div className="info-left-side flex flex-column">
@@ -64,7 +67,8 @@ export const App = () => {
             ></path>
           </svg>
         </div>
-      </MainStyle>
+      </main>
     </>
+    </ThemeProvider>
   );
 };
