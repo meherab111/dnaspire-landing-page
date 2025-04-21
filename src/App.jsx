@@ -1,7 +1,12 @@
+import { GlobalStyle } from "./styles/Global";
+import { HeaderStyle } from "./styles/Header";
+import { MainStyle } from "./styles/Main";
+
 export const App = () => {
   return (
     <>
-      <header>
+    <GlobalStyle/>
+      <HeaderStyle>
         <section className="container header-section flex">
           <div className="logo">
             <a href="#">DNAspire</a>
@@ -23,11 +28,11 @@ export const App = () => {
             </ul>
           </nav>
         </section>
-      </header>
+      </HeaderStyle>
 
-      <main>
-        <section>
-          <div className="container main-section grid grid-two-column">
+      <MainStyle>
+        <section className="container main-section grid grid-two-column">
+         
           <div className="info-left-side flex flex-column">
             <div className="info-text">
               <h1 className="discover-text">Discover</h1>
@@ -44,7 +49,7 @@ export const App = () => {
           <div className="info-right-side">
             <img src="./public/images/right-image.svg" alt="image" />
           </div>
-          </div>
+          
         </section>
         <div class="custom-shape-divider-bottom-1745089715">
           <svg
@@ -59,7 +64,7 @@ export const App = () => {
             ></path>
           </svg>
         </div>
-      </main>
+      </MainStyle>
     </>
   );
 };
