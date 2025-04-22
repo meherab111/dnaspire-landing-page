@@ -44,26 +44,6 @@ const MainStyle = styled.main`
     fill: ${ ({theme}) => theme.colors.secondaryColor};
   }
 
-  
-@media (width<=1536px) {
-  html {
-    font-size: 56%;
-  }
-}
-
-@media (width<=1280px) {
-  html {
-    font-size: 52%;
-  }
-  button {
-    height: 70px;
-    width: 280px;
-  }
-  .custom-shape-divider-bottom-1745089715 svg {
-    height: 114px;
-}
-}
-
  
 /** Media Query */
 
@@ -102,6 +82,9 @@ const MainStyle = styled.main`
 }
 
 @media (width<=768px){
+    .main-section {
+        gap: 2rem;
+    }
       .custom-shape-divider-bottom-1745089715 svg {
         height: 90px;
     }
@@ -109,6 +92,7 @@ const MainStyle = styled.main`
 
 @media (width<=540px){
       .main-section {
+        gap: 5rem;
         .info-left-side {
           h1 {
             font-size: 7.2rem;
